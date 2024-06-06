@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Home Match AI Seller</string>
+    <string name="you_need_some_mandatory">You need to give storage permissions to continue. Do you want to give permission?</string>
+
+    <string-array name="selling_type">
+        <item>Sell</item>
+        <item>Rent</item>
+    </string-array>
+
+    <string-array name="type">
+        <item>Select type</item>
+        <item>Plot</item>
+        <item>House</item>
+    </string-array>
+</resources>

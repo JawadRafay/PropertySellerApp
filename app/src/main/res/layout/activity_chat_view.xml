@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg"
+    android:clickable="true"
+    android:id="@+id/Chat_F"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.activities.ChatViewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_light">
+
+            <ImageButton
+                android:id="@+id/Goback"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitStart"
+                app:tint="@color/black"
+                android:src="@drawable/ic_back" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileimage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/Goback"
+                android:src="@drawable/image_placeholder" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/profileimage"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:id="@+id/fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/typeindicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:textColor="@color/text_color"
+                    android:text="Typing..."/>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/block"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:visibility="visible"
+                android:src="@drawable/ic_block" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chat_layout"
+        android:layout_below="@id/toolbar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="65dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true" />
+
+
+        <RelativeLayout
+            android:id="@+id/writechatlayout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/send_layout"
+            android:background="@drawable/et_bg">
+
+            <EditText
+                android:id="@+id/msgedittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_28sdp"
+                android:background="@android:color/transparent"
+                android:gravity="start"
+                android:hint="Ask me anything..."
+                android:inputType="textMultiLine"
+                android:maxHeight="@dimen/_65sdp"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/send_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/sendbtn"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:background="@drawable/circle_bg"
+                android:src="@drawable/send"
+                android:padding="@dimen/_9sdp"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

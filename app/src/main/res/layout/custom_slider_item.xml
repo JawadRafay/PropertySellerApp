@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+    </data>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/house"
+        android:contentDescription="Shelter Image" />
+</layout>

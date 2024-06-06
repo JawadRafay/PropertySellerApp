@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_102sdp"
+                    android:layout_height="@dimen/_102sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    app:cardCornerRadius="150dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/white"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/profile2"
+                    android:translationZ="2dp"
+                    android:layout_marginTop="40dp"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp"
+                    android:layout_marginBottom="@dimen/_10sdp"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Change profile picture"
+                    android:textStyle="normal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="16sp"/>
+                <ImageView
+                    android:id="@+id/camera"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/camera"
+                    app:tint="@color/gray_dark"
+                    android:paddingTop="6dp"
+                    android:layout_marginStart="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textStyle="bold"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:layout_height="40dp"
+                    android:hint=""
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/et_bg"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textStyle="bold"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:layout_height="40dp"
+                    android:hint=""
+                    android:inputType="textEmailAddress"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/et_bg"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone"
+                    android:textStyle="bold"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:layout_height="40dp"
+                    android:hint=""
+                    android:inputType="phone"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/et_bg"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textStyle="bold"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:layout_height="40dp"
+                    android:hint=""
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/et_bg"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:textStyle="bold"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/et_bg"
+                    android:layout_marginTop="6dp">
+
+                    <Spinner
+                        android:id="@+id/city"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_4sdp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/update"
+                    android:layout_width="230dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/btn_bg"
+                    android:text="Save Changes"
+                    android:layout_marginBottom="20dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

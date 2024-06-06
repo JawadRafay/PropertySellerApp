@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/_1sdp"
+    android:layout_marginStart="@dimen/_11sdp"
+    android:layout_marginEnd="@dimen/_11sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/datetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:textSize="12sp"
+        android:textColor="@color/gray_dark"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/round_edittext_background"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/chat_bg_other"
+        android:maxWidth="@dimen/_200sdp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="10dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datetxt" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvMsg"
+        android:text="02:56 PM"
+        android:textColor="@color/color_secondary"
+        android:textSize="@dimen/_8ssp"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="@+id/tvMsg"
+        app:layout_constraintTop_toBottomOf="@+id/tvMsg" />
+
+    <TextView
+        android:id="@+id/tvMsgMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/chat_bg_me"
+        android:maxWidth="@dimen/_200sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="10dp"
+        android:text="Pellentesque eget lectus a quam  "
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datetxt" />
+
+    <TextView
+        android:id="@+id/tvTimeMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="02:56 PM"
+        android:textColor="@color/color_secondary"
+        android:textSize="@dimen/_8ssp"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="@+id/tvMsgMe"
+        app:layout_constraintTop_toBottomOf="@+id/tvMsgMe" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

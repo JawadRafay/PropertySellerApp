@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.SheltersDetails">
+
+    <data></data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bookNow">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_230sdp"
+                    android:background="@color/color_secondary">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorEnabled="true"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#5A5A5A"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="1" />
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:src="@drawable/back"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Usama House"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:textSize="@dimen/_12ssp"/>
+
+                    <ImageView
+                        android:id="@+id/bookMark"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:src="@drawable/bookmark"
+                        app:tint="@color/white"
+                        android:padding="@dimen/_4sdp"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Usama Home"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/marker"
+                        app:tint="@color/text_color"/>
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Lahore, Pakistan"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/_9ssp"
+                        android:layout_marginStart="@dimen/_3sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/total_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Total Area:"
+                        android:textSize="@dimen/_10ssp"/>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/totalSpace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="400x400 sq ft"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Price:"
+                        android:textSize="@dimen/_10ssp"/>
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="440k"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@color/light_gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"/>
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. "
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@color/light_gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Images"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:id="@+id/fragment_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <fragment
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/map_white_round2" />
+
+                    <View
+                        android:id="@+id/overly"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bookNow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:text="Contact Now"
+            android:textAllCaps="false"
+            android:textColor="@color/bg"
+            android:background="@drawable/btn_bg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"/>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.MainActivity">
+
+    <data></data>
+
+    <RelativeLayout
+        android:keepScreenOn="true"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Home"
+                android:fontFamily="@font/gilroy"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_15sdp"/>
+
+            <TextView
+                android:id="@+id/verified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unverified"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gilroy"
+                android:background="@drawable/circle_red"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_11sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toStartOf="@+id/more"/>
+
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_more"
+                android:padding="@dimen/_2sdp"
+                app:tint="@color/text_color"
+                android:layout_alignParentRight="true" />
+
+            <ImageView
+                android:id="@+id/saved"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bookmark"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:visibility="gone"
+                android:layout_toStartOf="@+id/more" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            android:layout_below="@+id/header"/>
+
+        <FrameLayout
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_layout"
+            android:layout_below="@+id/header"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:layout_marginTop="1dp"/>
+
+        <ImageView
+            android:id="@+id/addProperty"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/add"
+            android:padding="@dimen/_15sdp"
+            android:background="@drawable/circle_bg"
+            app:tint="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/bottom_layout"
+            android:layout_margin="@dimen/_15sdp"/>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bottom_bg"
+                app:itemIconTint="@drawable/bottom_nav_color"
+                app:itemTextColor="@drawable/bottom_nav_color"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/bottom_menu"
+                app:itemIconSize="@dimen/_15sdp"
+                app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+                app:itemTextAppearance="@style/BottomNavigationView"
+                app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

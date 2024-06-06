@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "498722653946",
+    "project_id": "project-ed5c7",
+    "storage_bucket": "project-ed5c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498722653946:android:098562524bfab8b4526b43",
+        "android_client_info": {
+          "package_name": "com.hypenet.realestaterehmanseller"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkZW9yomi91cL0MFOl92masBVeqju92WE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
